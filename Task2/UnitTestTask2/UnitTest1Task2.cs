@@ -1,5 +1,4 @@
-﻿using System;
-using logic;
+﻿using logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestTask2
@@ -10,13 +9,12 @@ namespace UnitTestTask2
         [TestMethod]
         public void TestMethod1()
         {
-
             bool testResult = true;
             var act = new[]
             {
                 new[] {2, 2},
                 new[] {6, 7, 12212},
-                new[] {2, 2, 2},
+                new[] {2, 2, 2}
             };
 
             SortingClass.SortByElementsSum(act, false);
@@ -25,7 +23,7 @@ namespace UnitTestTask2
             {
                 new[] {6, 7, 12212},
                 new[] {2, 2, 2},
-                new[] {2, 2},
+                new[] {2, 2}
             };
 
             for (int i = 0; i < act.Length; i++)
@@ -38,16 +36,16 @@ namespace UnitTestTask2
 
             Assert.AreEqual(true, testResult);
         }
+
         [TestMethod]
         public void TestMethod2()
         {
-
             bool testResult = true;
             var act = new[]
             {
                 new[] {2, 3},
                 new[] {6, 7, 12212},
-                new[] {10, 1},
+                new[] {10, 1}
             };
 
             SortingClass.SortByMinElements(act, true);
@@ -56,7 +54,7 @@ namespace UnitTestTask2
             {
                 new[] {10, 1},
                 new[] {2, 3},
-                new[] {6, 7, 12212},
+                new[] {6, 7, 12212}
             };
 
             for (int i = 0; i < act.Length; i++)
@@ -69,16 +67,16 @@ namespace UnitTestTask2
 
             Assert.AreEqual(true, testResult);
         }
+
         [TestMethod]
         public void TestMethod3()
         {
-
             bool testResult = true;
             var act = new[]
             {
                 new[] {2, 2},
                 new[] {6, 7, 12212},
-                new[] {2, 3, 2},
+                new[] {2, 3, 2}
             };
 
             SortingClass.SortByMaxElements(act, false);
@@ -87,7 +85,7 @@ namespace UnitTestTask2
             {
                 new[] {6, 7, 12212},
                 new[] {2, 3, 2},
-                new[] {2, 2},
+                new[] {2, 2}
             };
 
             for (int i = 0; i < act.Length; i++)
@@ -98,26 +96,6 @@ namespace UnitTestTask2
                 }
             }
 
-            Assert.AreEqual(true, testResult);
-        }
-        [TestMethod]
-        public void TestMethod4()
-        {
-
-            bool testResult = true;
-            var act = new double[4][];
-
-            SortingClass.SortByElementsSum(act, false);
-
-            double[][] exp = null;//??????
-
-            for (int i = 0; i < act.Length; i++)
-            {
-                for (int j = 0; j < act[i].Length; j++)
-                {
-                    testResult &= act[i][j].Equals(exp[i][j]);
-                }
-            }
             Assert.AreEqual(true, testResult);
         }
     }

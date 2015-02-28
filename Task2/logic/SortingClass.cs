@@ -49,23 +49,23 @@ namespace logic
             Sort(targerArray, array, direct);
         }
 
-        private static void Sort<T>(T[][] targerArray, T[] array, bool direct) where T : IComparable<T> 
+        private static void Sort<T>(T[][] targerArray, T[] array, bool direct) where T : IComparable<T>
         {
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = i+1; j < array.Length; j++)
+                for (int j = i + 1; j < array.Length; j++)
                 {
                     if (direct)
                     {
-                        if (array[j].CompareTo(array[i]) < 0) 
+                        if (array[j].CompareTo(array[i]) < 0)
                         {
-                            Swap(ref array[j],ref array[i]);
-                            Swap(ref targerArray[j],ref targerArray[i]);
+                            Swap(ref array[j], ref array[i]);
+                            Swap(ref targerArray[j], ref targerArray[i]);
                         }
                     }
                     else
                     {
-                        if (array[j].CompareTo(array[i]) > 0) 
+                        if (array[j].CompareTo(array[i]) > 0)
                         {
                             Swap(ref array[j], ref array[i]);
                             Swap(ref targerArray[j], ref targerArray[i]);
