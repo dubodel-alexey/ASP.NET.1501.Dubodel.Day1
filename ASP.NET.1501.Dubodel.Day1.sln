@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2", "Task2", "{F064815A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logic", "Task2\logic\logic.csproj", "{928AF093-26AE-412E-8DCB-3BF25EFAD62D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTask2", "Task2\UnitTestTask2\UnitTestTask2.csproj", "{A8EE3EFE-BC83-4391-975C-1DA1BDE62564}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingClassTests", "Task2\UnitTestTask2\SortingClassTests.csproj", "{A8EE3EFE-BC83-4391-975C-1DA1BDE62564}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task3", "Task3", "{6DB2AE5C-C1F6-486E-9C9B-25F35660F372}"
 EndProject
