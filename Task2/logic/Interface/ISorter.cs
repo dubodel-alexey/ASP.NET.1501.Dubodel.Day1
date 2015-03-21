@@ -8,6 +8,6 @@ namespace logic
 {
     public interface ISorter
     {
-        void Sort(int[][] array, IComparer comparer);
+        void Sort(int[][] array, Func<int[], int[], int> compare);
     }
 }

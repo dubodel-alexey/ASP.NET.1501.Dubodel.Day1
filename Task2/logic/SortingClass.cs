@@ -18,7 +18,24 @@ namespace logic
             {
                 throw new ArgumentNullException("sorter");
             }
-            sorter.Sort(targetArray, comparer);
+            sorter.Sort(targetArray, comparer.Compare);
+        }
+
+        public static void Sort(this int[][] targetArray, Func<int[], int[], int> compare, ISorter sorter)
+        {
+            if (targetArray == null)
+            {
+                throw new ArgumentNullException("targetArray");
+            }
+            if (compare == null)
+            {
+                throw new ArgumentNullException("compare");
+            }
+            if (sorter == null)
+            {
+                throw new ArgumentNullException("sorter");
+            }
+            sorter.Sort(targetArray, compare);
         }
     }
 }

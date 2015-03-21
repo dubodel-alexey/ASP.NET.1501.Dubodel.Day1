@@ -47,17 +47,17 @@ namespace logic
             return firstNumber;
         }
 
-        public static long GreatestCommonDivisorEuclidean(ref TimeSpan outSpentTime, long firstNumber, long secondNumber)
+        public static long GreatestCommonDivisorEuclidean(ref long elapsedTicks, long firstNumber, long secondNumber)
         {
             var interval = new Stopwatch();
             interval.Start();
             long result = GreatestCommonDivisorEuclidean(firstNumber, secondNumber);
             interval.Stop();
-            outSpentTime = interval.Elapsed;
+            elapsedTicks = interval.ElapsedTicks;
             return result;
         }
 
-        public static long GreatestCommonDivisorEuclidean(ref TimeSpan outSpentTime, params long[] numbers)
+        public static long GreatestCommonDivisorEuclidean(ref long elapsedTicks, params long[] numbers)
         {
             var interval = new Stopwatch();
             interval.Start();
@@ -68,7 +68,7 @@ namespace logic
             }
 
             interval.Stop();
-            outSpentTime = interval.Elapsed;
+            elapsedTicks = interval.ElapsedTicks;
             return result;
         }
 
@@ -115,17 +115,17 @@ namespace logic
             return firstNumber << shift;
         }
 
-        public static long GreatestCommonDivisorStein(ref TimeSpan outSpentTime, long firstNumber, long secondNumber)
+        public static long GreatestCommonDivisorStein(ref long elapsedTicks, long firstNumber, long secondNumber)
         {
             var interval = new Stopwatch();
             interval.Start();
             long result = GreatestCommonDivisorStein(firstNumber, secondNumber);
             interval.Stop();
-            outSpentTime = interval.Elapsed;
+            elapsedTicks = interval.ElapsedTicks;
             return result;
         }
 
-        public static long GreatestCommonDivisorStein(ref TimeSpan outSpentTime, params long[] numbers)
+        public static long GreatestCommonDivisorStein(ref long elapsedTicks, params long[] numbers)
         {
             var interval = new Stopwatch();
             interval.Start();
@@ -135,7 +135,7 @@ namespace logic
                 result = GreatestCommonDivisorStein(result, numbers[i]);
             }
 
-            outSpentTime = interval.Elapsed;
+            elapsedTicks = interval.ElapsedTicks;
             return result;
         }
     }
